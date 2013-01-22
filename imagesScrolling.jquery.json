@@ -1,0 +1,35 @@
+{
+    "name": "imagesScrolling",
+    "title": "jQuery imagesScrolling",
+    "description": "Jquery plugin images scrolling",
+    "keywords": ["ppt",
+    			"effect",
+    			"image"
+    			"animation"
+      	],
+    "version": "1.0.0",
+    "author": {
+      "name": "yanhaijing",
+      "email":"776771343@qq.com",
+      "url": "https://github.com/yanhaijing"
+    },
+    "maintainers": [
+    {
+      "name": "yanhaijing",
+      "email":"776771343@qq.com",
+      "url": "http://t.qq.com/yanhaijing1234"
+    }
+  ],
+    "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/yanhaijing/jquery.imagesScrolling.js/blob/master/MIT-LICENSE.txt"
+    }
+  ],
+    "bugs": "https://github.com/yanhaijing/jquery.imagesScrolling.js/issues",
+    "homepage": "https://github.com/yanhaijing/jquery.imagesScrolling.js",
+    "docs": "https://github.com/yanhaijing/jquery.imagesScrolling.js",
+    "dependencies": {
+      "jquery": ">=1.5"
+    }
+}
