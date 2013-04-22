@@ -25,12 +25,19 @@
 			$div = $divs.eq(0),
 			len = $divs.length,
 			settings = {};
+			
+		//修复ie下margin的默认值为auto
+		tempMarginLeft = parseInt($div.css('margin-left'), 10);
+		marginLeft = isNaN(tempMarginLeft) ? 0 : tempMarginLeft;
 		
-		settings.width = $div.outerWidth() + parseInt($div.css('margin-left'), 10) + parseInt($div.css('margin-right'), 10);
+		tempMarginRight = parseInt($div.css('margin-right'), 10);
+		marginRight = isNaN(tempMarginRight) ? 0 : tempMarginRight;
+		
+		settings.width = $div.outerWidth() + marginLeft + marginRight;
 		settings.speed = 50;
 		settings.step = 1;
 		$.extend(settings, options);
-		
+
 		/**
 		 * 图片滚动
 		 * @method imageScroll
