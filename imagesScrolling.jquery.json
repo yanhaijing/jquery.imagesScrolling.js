@@ -7,17 +7,17 @@
     			"image",
     			"animation"
       	],
-    "version": "1.0.6",
+    "version": "2.0.0",
     "author": {
       "name": "yanhaijing",
-      "email":"776771343@qq.com",
+      "email":"yanhaijing@yeah.net",
       "url": "https://github.com/yanhaijing"
     },
     "maintainers": [
     {
       "name": "yanhaijing",
-      "email":"776771343@qq.com",
-      "url": "http://t.qq.com/yanhaijing1234"
+      "email":"yanhaijing@yeah.net",
+      "url": "http://t.qq.com/web_javascript"
     }
   ],
     "licenses": [

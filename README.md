@@ -15,7 +15,14 @@ jquery 图片滚动插件
  options参数是一个对象，包含三个值
  
 options.speed 每个多长时间移动一次，单位毫秒（默认值:50)
-options.step 每次移动长度 (默认值 1)
+options.step(string|number|null) 每次移动长度 (默认值 1)
+  step可选值:'auto','outer','inner','width',number,不传入
+  'auto':步长为width+padding+border+margin
+  'outer':步长为width+padding+border
+  'inner':步长为width+padding
+  'width':步长为width
+  number:步长为传入值
+  null:步长为默认值1
 options.width 元素的宽度 (默认值 子元素width+padding+border+margin)
 
 Example:
@@ -52,6 +59,8 @@ Example:
 			width:100%;
 			height:100%
 		}
+		
+	#[更多例子](http://yanhaijing.github.io/jquery.imagesScrolling.js/example/demo.html)
 		
 许可：
  本程序遵从MIT许可，但图片来自QQstyle，归tencent所有

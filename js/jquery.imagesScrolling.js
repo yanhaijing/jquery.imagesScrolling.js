@@ -24,19 +24,32 @@
 			$divs = $parent.find("div"),
 			$div = $divs.eq(0),
 			len = $divs.length,
-			settings = {};
-			
-		//修复ie下margin的默认值为auto
-		tempMarginLeft = parseInt($div.css('margin-left'), 10);
-		marginLeft = isNaN(tempMarginLeft) ? 0 : tempMarginLeft;
-		
-		tempMarginRight = parseInt($div.css('margin-right'), 10);
-		marginRight = isNaN(tempMarginRight) ? 0 : tempMarginRight;
-		
-		settings.width = $div.outerWidth() + marginLeft + marginRight;
-		settings.speed = 50;
-		settings.step = 1;
+			tempMarginLeft = parseInt($div.css('margin-left'), 10),
+            tempMarginRight = parseInt($div.css('margin-right'), 10),
+            marginLeft = isNaN(tempMarginLeft) ? 0 : tempMarginLeft,//修复ie下margin的默认值为auto
+            marginRight = isNaN(tempMarginRight) ? 0 : tempMarginRight,//修复ie下margin的默认值为auto
+			settings = {
+			    speed: 50,
+			    step: 1,
+			    width: $div.outerWidth() + marginLeft + marginRight
+			};			
+		//判断入口参数，修复width
+        if(options){
+            if(options.step === 'auto'){
+                options.step = $div.outerWidth() + marginLeft + marginRight;
+            }else if(options.step === 'outer'){
+                options.step = $div.outerWidth();
+            }else if(options.step === 'inner'){
+                options.step = $div.innerWidth();
+            }else if(options.step === 'width'){
+                options.step = $div.width();
+            }else if(typeof options.step !== 'number'){
+                options.step = 1;
+            }
+        }
+        
 		$.extend(settings, options);
+				
 
 		/**
 		 * 图片滚动
